@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css'
+import tw from "tailwind-styled-components"
 
 export default function Home() {
   return (
