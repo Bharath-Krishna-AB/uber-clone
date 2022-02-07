@@ -3,9 +3,13 @@ import tw from "tailwind-styled-components"
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <div className="map"></div>
-      <div className="start"></div>
-    </div>
+    <Wrapper>
+      <Map>Map</Map>
+      <ActionItems>Start</ActionItems>
+    </Wrapper>
   )
 }
+
+
+const Wrapper = tv.div`
+`
