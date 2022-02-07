@@ -11,5 +11,14 @@ export default function Home() {
 }
 
 
-const Wrapper = tv.div`
+const Wrapper = tw.div`
+ flex flex-col bg-red-300 h-screen
+`
+
+const Map = tw.div`
+bg-red-500 flex-1
+`
+
+const ActionItems = tw.div`
+flex-1 
 `
