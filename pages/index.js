@@ -1,5 +1,8 @@
 import styles from '../styles/Home.module.css'
 import tw from "tailwind-styled-components"
+import mapboxgl from '!mapbox-gl'
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmhhcmF0aC1hYiIsImEiOiJja3pjeGhxb2wxdXZrMzJtbTdwZ2ZkNGFmIn0.UKY16DAHjPQ4ydPP5eksYA';
 
 export default function Home() {
   return (
