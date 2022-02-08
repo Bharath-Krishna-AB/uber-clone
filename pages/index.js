@@ -15,7 +15,7 @@ export default function Home() {
           <UberLogo src="/Assets/uber-Logo-1.jpg" />
           <Profile>
             <Name>Bharath AB</Name>
-            <UserImage/>
+            <UserImage src="/Assets/my-img.jpg"/>
           </Profile>
         </Header>
 
