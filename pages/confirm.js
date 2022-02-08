@@ -8,6 +8,10 @@ const Confirm = () => {
   return (
       <Wrapper>
           <Map/>
+          <RideContainer>
+              {/* rideSelector */}
+              {/* confirm btn */}
+          </RideContainer>
       </Wrapper>
   );
 };
@@ -15,5 +19,8 @@ const Confirm = () => {
 export default Confirm;
 
 const Wrapper = tw.div`
-flex h-screen
+flex h-screen flex-col
+`
+const RideContainer = tw.div`
+flex-1
 `
