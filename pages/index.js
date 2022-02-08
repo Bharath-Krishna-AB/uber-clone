@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: "map",
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
       center: [76.20934049107285,10.517940473169347],
       zoom: 3
     })
