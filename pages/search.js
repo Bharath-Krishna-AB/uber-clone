@@ -20,6 +20,7 @@ const Search = () => {
         <Input placeholder="Enter pickup location"/>
         <Input placeholder="Where to?"/>
       </InputBoxes>
+      <PlusIcon src="/assets/plus-math.png"/>
       </InputContainer>
 
       {/* button container */}
@@ -46,7 +47,7 @@ h-12
 `
 
 const InputContainer = tw.div`
-bg-white flex
+bg-white flex items-center
 `
 
 const FromToICons =tw.div`
@@ -71,4 +72,8 @@ flex flex-col flex-1
 
 const Input = tw.input`
 h-10 bg-gray-200 my-2 rounded-2 p-2 outline-none border-none
+`
+
+const PlusIcon = tw.img`
+w-10 h-10 bg-gray-200 rounded-full ml-3
 `
