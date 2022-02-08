@@ -18,9 +18,16 @@ export default function Home() {
             <UserImage src="/Assets/my-img.jpg"/>
           </Profile>
         </Header>
-
         <ActionButtons>
-
+          <ActionButton>
+            ride
+          </ActionButton>
+          <ActionButton>
+            wheel
+          </ActionButton>
+          <ActionButton>
+            reserved
+          </ActionButton>
         </ActionButtons>
 
         <InputButton>
@@ -64,4 +71,8 @@ mr-4 w-20 text-sm
 
 const UserImage = tw.img`
 h-12 w-12 rounded-full border border-gray-200 p-px
+`
+
+const ActionButton = tw.div`
+
 `
