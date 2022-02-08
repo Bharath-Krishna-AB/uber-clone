@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 import tw from "tailwind-styled-components"
 import { useEffect } from 'react';
 import Map from './components/Map';
+import Link from 'next/link'
 
 
 export default function Home() {
@@ -19,10 +20,12 @@ export default function Home() {
           </Profile>
         </Header>
         <ActionButtons>
+          <Link href="/search">
           <ActionButton>
             <ActionButtonImage src="/Assets/uberx.png" />
             ride
           </ActionButton>
+          </Link>
           <ActionButton>
           <ActionButtonImage src="/Assets/bike.png" />
             wheel
