@@ -21,6 +21,10 @@ const Map = ({pickUpCoordiantes,dropOffCoordiantes}) => {
     if(pickUpCoordiantes){
       addToMap(map,pickUpCoordiantes)
     }
+
+    if(dropOffCoordiantes){
+      addToMap(map,dropOffCoordiantes)
+    }
   },[pickUpCoordiantes,dropOffCoordiantes]);
 
   const addToMap = (map,coordinates)=>{
