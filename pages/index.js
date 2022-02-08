@@ -37,7 +37,7 @@ const Wrapper = tw.div`
 `
 
 const ActionItems = tw.div`
-flex-1 
+flex-1  p-4
 `
 const Header = tw.div`
 flex justify-between items-center
