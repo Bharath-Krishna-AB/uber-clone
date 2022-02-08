@@ -22,7 +22,10 @@ const Search = () => {
       </InputBoxes>
       <PlusIcon src="/assets/plus-math.png"/>
       </InputContainer>
-
+      <SavedPlaces>
+        <StarIcon src="/assets/star--v1.png"/>
+        Saved Places
+      </SavedPlaces>
       {/* button container */}
       {/* input container */}
       {/* saved place */}
@@ -76,4 +79,12 @@ h-10 bg-gray-200 my-2 rounded-2 p-2 outline-none border-none
 
 const PlusIcon = tw.img`
 w-10 h-10 bg-gray-200 rounded-full ml-3
+`
+
+const SavedPlaces = tw.div`
+flex items-center bg-white px-4 py-2 font-semibold
+`
+
+const StarIcon = tw.img`
+bg-gray-400 w-10 h-10 p-2 rounded-full mr-2
 `
