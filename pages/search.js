@@ -16,6 +16,10 @@ const Search = () => {
         <Line src="/Assets/vertical-line.png" />
         <Square src="/Assets/Square-full.png" />
       </FromToICons>
+      <InputBoxes>
+        <Input placeholder="Enter pickup location"/>
+        <Input placeholder="Where to?"/>
+      </InputBoxes>
       </InputContainer>
 
       {/* button container */}
@@ -42,7 +46,7 @@ h-12
 `
 
 const InputContainer = tw.div`
-bg-white
+bg-white flex
 `
 
 const FromToICons =tw.div`
@@ -59,4 +63,12 @@ const Line = tw.img`
 
 const Square = tw.img`
 
+`
+
+const InputBoxes = tw.div`
+flex flex-col flex-1
+`
+
+const Input = tw.input`
+h-10 bg-gray-200 my-2 rounded-2 p-2 outline-none border-none
 `
