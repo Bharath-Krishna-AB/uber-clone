@@ -1,11 +1,19 @@
+
 import React from 'react';
+import tw from "tailwind-styled-components"
+import Map from './components/Map';
+
 
 const Confirm = () => {
   return (
-      <div>
-          
-      </div>
+      <Wrapper>
+          <Map/>
+      </Wrapper>
   );
 };
 
-export default Confirm;i
+export default Confirm;
+
+const Wrapper = tw.div`
+flex h-screen
+`
