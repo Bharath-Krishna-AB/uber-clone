@@ -15,7 +15,7 @@ const Map = ({pickUpCoordiantes,dropOffCoordiantes}) => {
       container: "map",
       style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
       center: [76.0726,10.4841],
-      zoom: 6,
+      zoom: 3,
     })
 
     if(pickUpCoordiantes){
@@ -25,6 +25,17 @@ const Map = ({pickUpCoordiantes,dropOffCoordiantes}) => {
     if(dropOffCoordiantes){
       addToMap(map,dropOffCoordiantes)
     }
+
+    if(pickUpCoordiantes && dropOffCoordiantes){
+      map.fitBounds([
+        pickUpCoordiantes,
+        dropOffCoordiantes
+      ],{
+        padding: 60
+      })
+    }
+
+
   },[pickUpCoordiantes,dropOffCoordiantes]);
 
   const addToMap = (map,coordinates)=>{
