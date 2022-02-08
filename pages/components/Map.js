@@ -14,8 +14,8 @@ const Map = () => {
     const map = new mapboxgl.Map({
       container: "map",
       style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
-      center: [76.20934049107285,10.517940473169347],
-      zoom: 3
+      center: [76.0726,10.4841],
+      zoom: 6
     })
   });
 
