@@ -77,9 +77,9 @@ h-12 w-12 rounded-full border border-gray-200 p-px
 `
 
 const ActionButton = tw.div`
-bg-gray-200 flex-1
+flex bg-gray-200 flex-1 m-1 h-32 items-center flex-col justify-center rounded-lg
 `
 
 const ActionButtonImage = tw.img`
-
+h-3/5
 `
