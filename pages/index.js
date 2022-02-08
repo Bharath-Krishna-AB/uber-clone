@@ -12,7 +12,7 @@ export default function Home() {
       <Map/>
       <ActionItems>
         <Header>
-
+          
         </Header>
 
         <ActionButtons>
