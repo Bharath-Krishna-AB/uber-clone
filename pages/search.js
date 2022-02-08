@@ -47,23 +47,23 @@ h-12
 `
 
 const InputContainer = tw.div`
-bg-white flex items-center
+bg-white flex items-center px-4 mb-2
 `
 
 const FromToICons =tw.div`
-w-10 flex flex-col 
+w-10 flex flex-col mr-2 items-center
 `
 
 const Circle = tw.img`
-
+h-2.5 
 `
 
 const Line = tw.img`
-
+h-10
 `
 
 const Square = tw.img`
-
+h-3
 `
 
 const InputBoxes = tw.div`
