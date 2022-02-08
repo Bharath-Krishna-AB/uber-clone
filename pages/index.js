@@ -40,7 +40,7 @@ const ActionItems = tw.div`
 flex-1 
 `
 const Header = tw.div`
-
+flex justify-between items-center
 `
 
 const ActionButtons = tw.div`
@@ -55,13 +55,13 @@ const UberLogo = tw.img`
 h-28
 `
 const Profile = tw.div`
-
+flex items-center
 `
 
 const Name = tw.div`
-
+mr-4 w-20 text-sm
 `
 
 const UserImage = tw.img`
-
+h-12 w-12 rounded-full border border-gray-200 p-px
 `
