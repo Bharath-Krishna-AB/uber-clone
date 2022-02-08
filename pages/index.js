@@ -51,7 +51,7 @@ flex justify-between items-center
 `
 
 const ActionButtons = tw.div`
-
+flex justify-between
 `
 
 const InputButton = tw.div`
@@ -74,5 +74,5 @@ h-12 w-12 rounded-full border border-gray-200 p-px
 `
 
 const ActionButton = tw.div`
-
+bg-gray-200 flex-1
 `
