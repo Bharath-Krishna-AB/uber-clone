@@ -13,7 +13,6 @@ const Search = () => {
         <BackButton src="/Assets/left.png" />
       </Link>
       </ButtonContainer>
-
       <InputContainer>
       <FromToICons>
         <Circle src="/Assets/filled-circle.png" />
@@ -30,6 +29,7 @@ const Search = () => {
         <StarIcon src="/assets/star--v1.png"/>
         Saved Places
       </SavedPlaces>
+      <ConfirmLocation>Confirm Locations</ConfirmLocation>
       {/* button container */}
       {/* input container */}
       {/* saved place */}
@@ -91,4 +91,8 @@ flex items-center bg-white px-4 py-2 font-semibold
 
 const StarIcon = tw.img`
 bg-gray-400 w-10 h-10 p-2 rounded-full mr-2
+`
+
+const ConfirmLocation = tw.div`
+flex bg-black text-white p-2 m-3 justify-center font-semibold 
 `
