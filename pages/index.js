@@ -12,7 +12,11 @@ export default function Home() {
       <Map/>
       <ActionItems>
         <Header>
-          
+          <UberLogo src="/Assets/uber-Logo-1.jpg" />
+          <Profile>
+            <Name>Bharath AB</Name>
+            <UserImage/>
+          </Profile>
         </Header>
 
         <ActionButtons>
@@ -29,7 +33,7 @@ export default function Home() {
 
 
 const Wrapper = tw.div`
- flex flex-col bg-red-300 h-screen
+ flex flex-col h-screen
 `
 
 const ActionItems = tw.div`
@@ -44,5 +48,20 @@ const ActionButtons = tw.div`
 `
 
 const InputButton = tw.div`
+
+`
+
+const UberLogo = tw.img`
+h-28
+`
+const Profile = tw.div`
+
+`
+
+const Name = tw.div`
+
+`
+
+const UserImage = tw.img`
 
 `
