@@ -33,9 +33,9 @@ export default function Home() {
           </ActionButton>
         </ActionButtons>
 
-        {/* <InputButton>
-
-        </InputButton> */}
+        <InputButton>
+        Where to?
+        </InputButton>
       </ActionItems>
     </Wrapper>
   )
@@ -55,10 +55,6 @@ flex justify-between items-center
 
 const ActionButtons = tw.div`
 flex justify-between
-`
-
-const InputButton = tw.div`
-
 `
 
 const UberLogo = tw.img`
@@ -82,4 +78,9 @@ flex bg-gray-200 flex-1 m-1 h-32 items-center flex-col justify-center rounded-lg
 
 const ActionButtonImage = tw.img`
 h-3/5
+`
+
+
+const InputButton = tw.div`
+h-20 bg-gray-200 text-2xl p-4 flex items-center mt-8
 `
