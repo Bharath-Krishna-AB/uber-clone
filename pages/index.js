@@ -20,19 +20,22 @@ export default function Home() {
         </Header>
         <ActionButtons>
           <ActionButton>
+            <ActionButtonImage src="/Assets/uberx.png" />
             ride
           </ActionButton>
           <ActionButton>
+          <ActionButtonImage src="/Assets/bike.png" />
             wheel
           </ActionButton>
           <ActionButton>
+          <ActionButtonImage src="/Assets/uberschedule.png" />
             reserved
           </ActionButton>
         </ActionButtons>
 
-        <InputButton>
+        {/* <InputButton>
 
-        </InputButton>
+        </InputButton> */}
       </ActionItems>
     </Wrapper>
   )
@@ -75,4 +78,8 @@ h-12 w-12 rounded-full border border-gray-200 p-px
 
 const ActionButton = tw.div`
 bg-gray-200 flex-1
+`
+
+const ActionButtonImage = tw.img`
+
 `
