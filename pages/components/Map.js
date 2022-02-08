@@ -7,7 +7,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmhhcmF0aC1hYiIsImEiOiJja3pjeGhxb2wxdXZrMzJtb
 
 
 
-const Map = () => {
+const Map = ({pickUpCoordiantes,dropOffCoordiantes}) => {
 
     
   useEffect(() => {
@@ -17,13 +17,15 @@ const Map = () => {
       center: [76.0726,10.4841],
       zoom: 6,
     })
-    addToMap(map)
 
-  });
+    if(pickUpCoordiantes){
+      addToMap(map,pickUpCoordiantes)
+    }
+  },[pickUpCoordiantes,dropOffCoordiantes]);
 
-  const addToMap = (map)=>{
+  const addToMap = (map,coordinates)=>{
     const marker1 = new mapboxgl.Marker()
-    .setLngLat([76.0726,10.4841])
+    .setLngLat(coordinates)
     .addTo(map);
   
     }
