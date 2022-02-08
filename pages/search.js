@@ -1,5 +1,7 @@
 import React from 'react';
 import tw from "tailwind-styled-components"
+import Link from 'next/link'
+
 
 
 const Search = () => {
@@ -7,7 +9,9 @@ const Search = () => {
     <Wrapper>
 
       <ButtonContainer>
+        <Link href="/">
         <BackButton src="/Assets/left.png" />
+      </Link>
       </ButtonContainer>
 
       <InputContainer>
