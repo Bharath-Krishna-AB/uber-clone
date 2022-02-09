@@ -16,7 +16,6 @@ const Confirm = () => {
 
 
     const getPickUpCoordinates = (pickUp)=>{
-        console.log(pickUp);
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${pickUp}.json?`+
         new URLSearchParams({
             access_token: 'pk.eyJ1IjoiYmhhcmF0aC1hYiIsImEiOiJja3pjeGhxb2wxdXZrMzJtbTdwZ2ZkNGFmIn0.UKY16DAHjPQ4ydPP5eksYA',
@@ -30,7 +29,6 @@ const Confirm = () => {
     }
 
     const getDropOffCoordinates = (dropOff)=>{
-    console.log(dropOff);
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${dropOff}.json?`+
         new URLSearchParams({
             access_token: 'pk.eyJ1IjoiYmhhcmF0aC1hYiIsImEiOiJja3pjeGhxb2wxdXZrMzJtbTdwZ2ZkNGFmIn0.UKY16DAHjPQ4ydPP5eksYA',
@@ -61,9 +59,12 @@ const Confirm = () => {
               {/* rideSelector
                */}
               {/* confirm btn */}
+              <RideSelector>
 
-              {pickUpCoordiantes}
-              {dropOffCoordiantes}
+              </RideSelector>
+              <ConfirmButtonContainer>
+
+              </ConfirmButtonContainer>
           </RideContainer>
       </Wrapper>
   );
@@ -76,4 +77,12 @@ flex h-screen flex-col
 `
 const RideContainer = tw.div`
 flex-1
+`
+
+const rideSelector = tw.div`
+
+`
+
+const  confirmButtonContainer = tw.div`
+
 `

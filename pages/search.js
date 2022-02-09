@@ -11,7 +11,6 @@ const Search = () => {
   const [dropOff, setDropOff] = useState('');
 
 
-  console.log(dropOff);
 
 
   return (
