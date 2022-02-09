@@ -7,7 +7,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmhhcmF0aC1hYiIsImEiOiJja3pjeGhxb2wxdXZrMzJtb
 
 
 
-const Map = ({pickUpCoordiantes,dropOffCoordiantes}) => {
+const Map = ({pickUpCoordinates,dropOffCoordinates}) => {
 
     
   useEffect(() => {
@@ -18,25 +18,25 @@ const Map = ({pickUpCoordiantes,dropOffCoordiantes}) => {
       zoom: 3,
     })
 
-    if(pickUpCoordiantes){
-      addToMap(map,pickUpCoordiantes)
+    if(pickUpCoordinates){
+      addToMap(map,pickUpCoordinates)
     }
 
-    if(dropOffCoordiantes){
-      addToMap(map,dropOffCoordiantes)
+    if(dropOffCoordinates){
+      addToMap(map,dropOffCoordinates)
     }
 
-    if(pickUpCoordiantes && dropOffCoordiantes){
+    if(pickUpCoordinates && dropOffCoordinates){
       map.fitBounds([
-        pickUpCoordiantes,
-        dropOffCoordiantes
+        pickUpCoordinates,
+        dropOffCoordinates
       ],{
         padding: 60
       })
     }
 
 
-  },[pickUpCoordiantes,dropOffCoordiantes]);
+  },[pickUpCoordinates,dropOffCoordinates]);
 
   const addToMap = (map,coordinates)=>{
     const marker1 = new mapboxgl.Marker()

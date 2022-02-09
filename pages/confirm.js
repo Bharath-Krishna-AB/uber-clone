@@ -12,8 +12,8 @@ const Confirm = () => {
     const { pickUp,dropOff } =Router.query
 
     
-    const [pickUpCoordiantes, setPickUpCoordiantes] = useState();
-    const [dropOffCoordiantes, setDropOffCoordiantes] = useState();
+    const [pickUpCoordinates, setPickUpCoordinates] = useState();
+    const [dropOffCoordinates, setDropOffCoordinates] = useState();
 
 
 
@@ -26,7 +26,7 @@ const Confirm = () => {
         )
         .then(response => response.json())
         .then(data =>{
-            setPickUpCoordiantes(data.features[0].center)
+            setPickUpCoordinates(data.features[0].center)
         })
     }
 
@@ -39,7 +39,7 @@ const Confirm = () => {
         )
         .then(response => response.json())
         .then(data =>{
-            setDropOffCoordiantes(data.features[0].center)
+            setDropOffCoordinates(data.features[0].center)
 
         })
     }
@@ -59,8 +59,8 @@ const Confirm = () => {
             </Link>
          </BackButtonContainer>
           <Map
-          pickUpCoordiantes = {pickUpCoordiantes}
-          dropOffCoordiantes = {dropOffCoordiantes}
+          pickUpCoordinates = {pickUpCoordinates}
+          dropOffCoordinates = {dropOffCoordinates}
           />
           <RideContainer>
               <RideSelector/>
