@@ -36,7 +36,7 @@ const RideSelector = ({pickUpCoordinates,dropOffCoordinates}) => {
                                 5 min away
                             </Time>
                         </CarDetails>
-                        <Price>{`$${(rideDuration * car.multiplier).toFixed(0)}`}</Price>
+                        <Price>{`₹${(rideDuration * car.multiplier).toFixed(0) * 75}`}</Price>
                     </Car>
                     )
                   })
