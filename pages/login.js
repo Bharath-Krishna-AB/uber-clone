@@ -24,7 +24,7 @@ bg-black text-white  text-center py-4 mt-8 self-center w-full
 `
 
 const UberLogo = tw.img`
-h-7 w-auto object-contain self-start
+h-7 w-auto object-contain self-start mt-4
 `
 
 const Title = tw.div`
