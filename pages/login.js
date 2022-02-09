@@ -7,6 +7,7 @@ const Login = () => {
     <Wrapper>
         <UberLogo src="/Assets/uber-Logo-2.png"/>
         <Title>Login in to access your account</Title>
+        <LoginImage src="/Assets/login-image.png" />
         <LoginButton>Login in with Google</LoginButton>
     </Wrapper>
   )
@@ -28,4 +29,8 @@ h-7 w-auto object-contain self-start
 
 const Title = tw.div`
 text-4xl pt-8  text-gray-500
+`
+
+const LoginImage = tw.img`
+object-contain w-full 
 `
