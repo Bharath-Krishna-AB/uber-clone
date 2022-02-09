@@ -3,6 +3,7 @@ import {useEffect,useState} from 'react';
 import tw from "tailwind-styled-components"
 import Map from './components/Map';
 import {useRouter} from 'next/router'
+import RideSelector from './components/RideSelector'
 
 
 const Confirm = () => {
@@ -59,11 +60,9 @@ const Confirm = () => {
               {/* rideSelector
                */}
               {/* confirm btn */}
-              <RideSelector>
-                  ride Selector
-              </RideSelector>
+              <RideSelector/>
               <ConfirmButtonContainer>
-                  confirm button container
+                  Confirm UberX
               </ConfirmButtonContainer>
           </RideContainer>
       </Wrapper>
@@ -76,13 +75,9 @@ const Wrapper = tw.div`
 flex h-screen flex-col
 `
 const RideContainer = tw.div`
-flex-1
-`
-
-const RideSelector = tw.div`
-
+flex-1 flex flex-col 
 `
 
 const  ConfirmButtonContainer = tw.div`
-
+bg-black text-white
 `
