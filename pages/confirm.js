@@ -60,10 +60,10 @@ const Confirm = () => {
                */}
               {/* confirm btn */}
               <RideSelector>
-
+                  ride Selector
               </RideSelector>
               <ConfirmButtonContainer>
-
+                  confirm button container
               </ConfirmButtonContainer>
           </RideContainer>
       </Wrapper>
@@ -79,10 +79,10 @@ const RideContainer = tw.div`
 flex-1
 `
 
-const rideSelector = tw.div`
+const RideSelector = tw.div`
 
 `
 
-const  confirmButtonContainer = tw.div`
+const  ConfirmButtonContainer = tw.div`
 
 `
