@@ -7,12 +7,29 @@ import {auth,provider} from '../firebase'
 
 
 const Login = () => {
+
+  const Router = useRouter()
+
+  useEffect(() => {
+
+    onAuthStateChanged(auth,user => {
+
+      if(user){
+        Router.push('/')
+      }
+
+    })
+
+  }, [])
+  
+
+
   return (
     <Wrapper>
         <UberLogo src="/Assets/uber-Logo-2.png"/>
         <Title>Login in to access your account</Title>
         <LoginImage src="/Assets/login-image.png" />
-        <LoginButton>Login in with Google</LoginButton>
+        <LoginButton onClick={()=> signInWithPopup(auth,provider)}>Login in with Google</LoginButton>
     </Wrapper>
   )
 }
