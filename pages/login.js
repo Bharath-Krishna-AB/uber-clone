@@ -13,7 +13,7 @@ const Login = () => {
 export default Login
 
 const Wrapper = tw.div`
-
+flex flex-col h-screen bg-gray-200 p-4
 `
 
 const LoginButton = tw.button`
