@@ -2,17 +2,21 @@
 import {useEffect,useState} from 'react';
 import tw from "tailwind-styled-components"
 import Map from './components/Map';
+import {useRouter} from 'next/router'
 
 
 const Confirm = () => {
+    const Router = useRouter()
+    const { pickUp,dropOff } =Router.query
+
     
     const [pickUpCoordiantes, setPickUpCoordiantes] = useState();
     const [dropOffCoordiantes, setDropOffCoordiantes] = useState();
 
 
 
-    const getPickUpCoordinates = ()=>{
-        const pickUp ='India,Kochi';
+    const getPickUpCoordinates = (pickUp)=>{
+        console.log(pickUp);
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${pickUp}.json?`+
         new URLSearchParams({
             access_token: 'pk.eyJ1IjoiYmhhcmF0aC1hYiIsImEiOiJja3pjeGhxb2wxdXZrMzJtbTdwZ2ZkNGFmIn0.UKY16DAHjPQ4ydPP5eksYA',
@@ -25,8 +29,8 @@ const Confirm = () => {
         })
     }
 
-    const getDropOffCoordinates = ()=>{
-        const dropOff ='Thrissur';
+    const getDropOffCoordinates = (dropOff)=>{
+    console.log(dropOff);
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${dropOff}.json?`+
         new URLSearchParams({
             access_token: 'pk.eyJ1IjoiYmhhcmF0aC1hYiIsImEiOiJja3pjeGhxb2wxdXZrMzJtbTdwZ2ZkNGFmIn0.UKY16DAHjPQ4ydPP5eksYA',
@@ -41,9 +45,9 @@ const Confirm = () => {
     }
 
     useEffect(() => {
-        getPickUpCoordinates()
-        getDropOffCoordinates()
-    },[]);
+        getPickUpCoordinates(pickUp)
+        getDropOffCoordinates(dropOff)
+    },[pickUp,dropOff]);
     
 
 
