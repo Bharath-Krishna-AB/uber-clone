@@ -38,7 +38,9 @@ export default function Home() {
           <UberLogo src="/Assets/uber-Logo-1.jpg" />
           <Profile>
             <Name>{userData?.name}</Name>
-            <UserImage src={userData?.photoUrl}/>
+            <UserImage 
+            onClick={() => signOut(auth)} 
+            src={userData?.photoUrl}/>
           </Profile>
         </Header>
         <ActionButtons>
