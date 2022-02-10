@@ -62,7 +62,7 @@ const CarList = tw.div`
 overflow-y-scroll
 `
 const Car = tw.div`
-flex p-4 items-center
+flex p-4 items-center  transform hover:scale-105 hover:bg-gray-100 transition
 `
 
 const CarImage = tw.img`
