@@ -19,11 +19,11 @@ const Map = ({pickUpCoordinates,dropOffCoordinates}) => {
     })
 
     if(pickUpCoordinates){
-      addToMap(map,pickUpCoordinates)
+      addPickUp(map,pickUpCoordinates)
     }
 
     if(dropOffCoordinates){
-      addToMap(map,dropOffCoordinates)
+      addDropOff(map,dropOffCoordinates)
     }
 
     if(pickUpCoordinates && dropOffCoordinates){
@@ -38,13 +38,19 @@ const Map = ({pickUpCoordinates,dropOffCoordinates}) => {
 
   },[pickUpCoordinates,dropOffCoordinates]);
 
-  const addToMap = (map,coordinates)=>{
+  const addPickUp = (map,coordinates)=>{
     const marker1 = new mapboxgl.Marker()
     .setLngLat(coordinates)
     .addTo(map);
-  
     }
 
+    const addDropOff = (map,coordinates)=>{
+      const marker1 = new mapboxgl.Marker({
+        color: "#2c3e50",
+      })
+      .setLngLat(coordinates)
+      .addTo(map);
+      }
 
   return (
   <Wrapper id="map">
