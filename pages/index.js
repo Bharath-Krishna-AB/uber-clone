@@ -3,11 +3,31 @@ import tw from "tailwind-styled-components"
 import { useEffect,useState } from 'react';
 import Map from './components/Map';
 import Link from 'next/link'
-import auth from '../firebase'
+import {auth} from '../firebase'
 import {onAuthStateChanged,signOut} from 'firebase/auth'
 import { useRouter } from 'next/router'
 
 export default function Home() {
+
+  const route = useRouter()
+  const [userData,SetUserData] = useState()
+
+  useEffect(() => {
+    
+    onAuthStateChanged(auth, user =>{
+      if(user){
+        SetUserData({
+          name: user.displayName,
+          photoUrl: user.photoURL,
+        })
+      }else{
+        SetUserData(null)
+        route.push('/login')
+      }
+    })
+
+  }, [])
+  
 
 
   return (
@@ -17,7 +37,7 @@ export default function Home() {
         <Header>
           <UberLogo src="/Assets/uber-Logo-1.jpg" />
           <Profile>
-            <Name>Bharath AB</Name>
+            <Name>{userData?.name}</Name>
             <UserImage src="/Assets/my-img.jpg"/>
           </Profile>
         </Header>
