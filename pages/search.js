@@ -71,7 +71,7 @@ bg-white px-4
 `
 
 const BackButton = tw.img`
-h-12
+h-12 cursor-pointer
 `
 
 const InputContainer = tw.div`
@@ -115,5 +115,5 @@ bg-gray-400 w-10 h-10 p-2 rounded-full mr-2
 `
 
 const ConfirmLocation = tw.div`
-flex bg-black text-white p-2 m-3 justify-center font-semibold 
+flex bg-black text-white p-2 m-3 justify-center font-semibold cursor-pointer
 `
