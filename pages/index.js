@@ -50,10 +50,12 @@ export default function Home() {
             ride
           </ActionButton>
           </Link>
+          <Link href="/search">
           <ActionButton>
           <ActionButtonImage src="/Assets/bike.png" />
             wheel
           </ActionButton>
+          </Link>
           <ActionButton>
           <ActionButtonImage src="/Assets/uberschedule.png" />
             reserved
