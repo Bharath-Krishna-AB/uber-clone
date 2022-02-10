@@ -64,10 +64,13 @@ const Confirm = () => {
           />
           <RideContainer>
               {
+               fromAddress=='ride' ?
               <RideSelector
                 pickUpCoordinates = {pickUpCoordinates}
                 dropOffCoordinates = {dropOffCoordinates}
-              />                 
+              />
+              :
+              <h1>wheel</h1>                
             }
           </RideContainer>
           
