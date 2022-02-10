@@ -5,8 +5,8 @@ import {carList} from '../data/CarList'
 
 const RideSelector = ({pickUpCoordinates,dropOffCoordinates}) => {
 
-
     const [rideDuration, setRideDuration] = useState(0)
+    const [changeCarColor, setChangeCarColor] = useState(false)
 
     useEffect(() => {
         fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${pickUpCoordinates[0]+','+pickUpCoordinates[1]};${dropOffCoordinates[0]+','+dropOffCoordinates[1]}?access_token=pk.eyJ1IjoiYmhhcmF0aC1hYiIsImEiOiJja3pjeGhxb2wxdXZrMzJtbTdwZ2ZkNGFmIn0.UKY16DAHjPQ4ydPP5eksYA`
@@ -26,7 +26,12 @@ const RideSelector = ({pickUpCoordinates,dropOffCoordinates}) => {
               {
                   carList.map((car,index)=>{
                       return (
-                        <Car key={index}>
+                        <Car id={index} key={index} onClick={()=>{
+                            setChangeCarColor(!changeCarColor)
+                            if(changeCarColor){
+                                document.getElementById(index).style.background = 'rgb(229 231 235)'
+                            }
+                            }}>
                         <CarImage src={car.imgUrl}/>
                         <CarDetails>
                             <Service>
