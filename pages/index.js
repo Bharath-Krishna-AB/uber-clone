@@ -44,13 +44,23 @@ export default function Home() {
           </Profile>
         </Header>
         <ActionButtons>
-          <Link href="/search">
+          <Link href={{
+        pathname: '/search',
+        query: {
+          fromAddress : 'ride',
+        }
+      }}>
           <ActionButton>
             <ActionButtonImage src="/Assets/uberx.png" />
             ride
           </ActionButton>
           </Link>
-          <Link href="/search">
+          <Link href={{
+        pathname: '/search',
+        query: {
+          fromAddress : 'wheel',
+        }
+      }}>
           <ActionButton>
           <ActionButtonImage src="/Assets/bike.png" />
             wheel
