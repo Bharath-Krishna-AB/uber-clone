@@ -6,6 +6,8 @@ import {carList} from '../data/CarList'
 const RideSelector = ({pickUpCoordinates,dropOffCoordinates}) => {
 
     const [rideDuration, setRideDuration] = useState(0)
+    const [getClickedCar, setGetClickedCar] = useState()
+    console.log(getClickedCar);
 
     useEffect(() => {
         fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${pickUpCoordinates[0]+','+pickUpCoordinates[1]};${dropOffCoordinates[0]+','+dropOffCoordinates[1]}?access_token=pk.eyJ1IjoiYmhhcmF0aC1hYiIsImEiOiJja3pjeGhxb2wxdXZrMzJtbTdwZ2ZkNGFmIn0.UKY16DAHjPQ4ydPP5eksYA`
@@ -25,7 +27,7 @@ const RideSelector = ({pickUpCoordinates,dropOffCoordinates}) => {
               {
                   carList.map((car,index)=>{
                       return (
-                        <Car id={index} key={index}>
+                        <Car id={index} key={index} onClick={()=> setGetClickedCar(car) } >
                         <CarImage src={car.imgUrl}/>
                         <CarDetails>
                             <Service>
@@ -40,9 +42,12 @@ const RideSelector = ({pickUpCoordinates,dropOffCoordinates}) => {
                     )
                   })
               }
-
-
           </CarList>
+          <ConfirmButtonContainer>
+                  <ConfirmButton>
+                    Confirm {getClickedCar ? getClickedCar.service: 'a Car'}
+                  </ConfirmButton>
+              </ConfirmButtonContainer>
       </Wrapper>
   )
 }
@@ -82,4 +87,12 @@ text-xs text-blue-500
 
 const Price = tw.div`
 text-sm
+`
+
+const  ConfirmButtonContainer = tw.div`
+border-t-2
+`
+
+const ConfirmButton = tw.div`
+bg-black text-white my-4 mx-4 py-4 text-center text-xl cursor-pointer
 `

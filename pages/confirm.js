@@ -67,11 +67,6 @@ const Confirm = () => {
                 pickUpCoordinates = {pickUpCoordinates}
                 dropOffCoordinates = {dropOffCoordinates}
               />
-              <ConfirmButtonContainer>
-                  <ConfirmButton>
-                    Confirm UberX
-                  </ConfirmButton>
-              </ConfirmButtonContainer>
           </RideContainer>
       </Wrapper>
   );
@@ -85,15 +80,6 @@ flex h-screen flex-col
 const RideContainer = tw.div`
 flex-1 flex flex-col  h-1/2
 `
-
-const  ConfirmButtonContainer = tw.div`
-border-t-2
-`
-
-const ConfirmButton = tw.div`
-bg-black text-white my-4 mx-4 py-4 text-center text-xl cursor-pointer
-`
-
 
 const BackButtonContainer = tw.div`
 absolute rounded-full z-10 top-2 left-2 bg-white shadow-md cursor-pointer
