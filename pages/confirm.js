@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const Confirm = () => {
     const Router = useRouter()
-    const { pickUp,dropOff } =Router.query
+    const { pickUp,dropOff,fromAddress } = Router.query
 
     
     const [pickUpCoordinates, setPickUpCoordinates] = useState([76.267303,9.931233]);
@@ -63,11 +63,14 @@ const Confirm = () => {
           dropOffCoordinates = {dropOffCoordinates}
           />
           <RideContainer>
+              {
               <RideSelector
                 pickUpCoordinates = {pickUpCoordinates}
                 dropOffCoordinates = {dropOffCoordinates}
-              />
+              />                 
+            }
           </RideContainer>
+          
       </Wrapper>
   );
 };

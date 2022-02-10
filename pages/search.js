@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import tw from "tailwind-styled-components"
 import Link from 'next/link'
+import {useRouter} from 'next/router'
+
 
 
 
@@ -9,6 +11,10 @@ const Search = () => {
 
   const [pickUp, setPickUp] = useState('');
   const [dropOff, setDropOff] = useState('');
+
+  const Router = useRouter()
+  const {fromAddress} =Router.query
+
 
 
 
@@ -47,6 +53,8 @@ const Search = () => {
         query: {
           pickUp : pickUp,
           dropOff: dropOff,
+          fromAddress: fromAddress
+          
         }
       }}>
       <ConfirmLocation>Confirm Locations</ConfirmLocation>
