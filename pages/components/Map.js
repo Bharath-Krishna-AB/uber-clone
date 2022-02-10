@@ -15,7 +15,7 @@ const Map = ({pickUpCoordinates,dropOffCoordinates}) => {
       container: "map",
       style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
       center: [76.0726,10.4841],
-      zoom: 3,
+      zoom: 9,
     })
 
     if(pickUpCoordinates){
