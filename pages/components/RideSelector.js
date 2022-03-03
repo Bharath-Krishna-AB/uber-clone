@@ -1,6 +1,7 @@
 import {useEffect,useState} from 'react'
 import tw from "tailwind-styled-components"
 import {carList} from '../data/CarList'
+import Link from 'next/link'
 
 
 const RideSelector = ({pickUpCoordinates,dropOffCoordinates}) => {
@@ -44,9 +45,11 @@ const RideSelector = ({pickUpCoordinates,dropOffCoordinates}) => {
               }
           </CarList>
           <ConfirmButtonContainer>
+              <Link href={'/confirmedCar'}>
                   <ConfirmButton>
                     Confirm {getClickedCar ? getClickedCar.service: 'a Car'}
                   </ConfirmButton>
+              </Link>                  
               </ConfirmButtonContainer>
       </Wrapper>
   )
