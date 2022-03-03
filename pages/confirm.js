@@ -5,6 +5,7 @@ import Map from './components/Map';
 import {useRouter} from 'next/router'
 import RideSelector from './components/RideSelector'
 import Link from 'next/link'
+import Wheel from './components/Wheel';
 
 
 const Confirm = () => {
@@ -70,7 +71,7 @@ const Confirm = () => {
                 dropOffCoordinates = {dropOffCoordinates}
               />
               :
-              <h1>wheel</h1>                
+              <Wheel/>               
             }
           </RideContainer>
           
