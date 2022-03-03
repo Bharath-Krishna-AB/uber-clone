@@ -5,14 +5,14 @@ import tw from "tailwind-styled-components"
 
 const confirmedCar = () => {
   return (
-    <ConfirmedCar>
+    <Wrapper>
         This is only a sample website <br/> so the car will not come .
-    </ConfirmedCar>
+    </Wrapper>
   )
 }
 
 export default confirmedCar;
 
-const ConfirmedCar = tw.div`
+const Wrapper = tw.div`
 flex h-screen flex-col bg-gray-200 text-center justify-center text-2xl font-bold text-blue-400
 `
