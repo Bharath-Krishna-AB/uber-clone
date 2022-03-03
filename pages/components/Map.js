@@ -13,7 +13,7 @@ const Map = ({pickUpCoordinates,dropOffCoordinates}) => {
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: "map",
-      style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
+      style: 'mapbox://styles/mapbox/streets-v11',
       center: [76.0726,10.4841],
       zoom: 9,
     })
