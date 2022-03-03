@@ -66,10 +66,12 @@ export default function Home() {
             wheel
           </ActionButton>
           </Link>
+          <Link href={'/reserved'}>
           <ActionButton>
           <ActionButtonImage src="/Assets/uberschedule.png" />
             reserved
           </ActionButton>
+          </Link>
         </ActionButtons>
 
         <InputButton>
